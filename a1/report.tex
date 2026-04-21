@@ -1,0 +1,286 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{parskip}
+
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\onehalfspacing
+
+\title{\textbf{Assignment 1: Lean Startup}\\
+       \large StudentBridge -- Connecting Students with Local SMEs\\[0.5em]
+       \normalsize 2DV614, VT26}
+\author{Individual Assignment}
+\date{Submitted: 2026-05-31}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+\newpage
+
+% ============================================================
+\section{Business Idea}
+
+\textbf{StudentBridge} is an online platform that connects local Small and Medium Enterprises
+(SMEs) with university students for short, paid ``mini-projects'' lasting approximately two weeks
+(around 10~hours of student work). Businesses post well-scoped tasks -- such as building a
+landing page, analysing survey data, or creating social-media graphics -- and students apply
+to complete them. Upon successful delivery the student receives a modest fee (300--500~SEK)
+and a verified \emph{Certificate of Work} that can be added to their CV.
+
+The idea emerged from two observed pain points: (1)~SMEs often have small digital or
+analytical tasks they lack the in-house resources to tackle, and (2)~students struggle to gain
+real-world work experience outside traditional internships.
+
+% ============================================================
+\section{Lean Model Canvas}
+
+\begin{tabularx}{\textwidth}{|X|X|X|}
+\hline
+\textbf{Problem} & \textbf{Solution} & \textbf{Unique Value Proposition} \\
+Students lack structured access to real-world experience. SMEs cannot afford full-time staff for small tasks. &
+A matchmaking platform for 10-hour paid mini-projects with digital delivery and certificate issuance. &
+Verified ``Certificate of Work'' for students; affordable, fast delivery for SMEs. \\
+\hline
+\textbf{Key Metrics} & \textbf{Unfair Advantage} & \textbf{Channels} \\
+Number of posted tasks; number of completed projects; student retention rate; SME repeat orders. &
+University partnerships; academic credibility of certificates; low overhead marketplace model. &
+University career portals, LinkedIn, direct email outreach to SMEs, campus posters. \\
+\hline
+\multicolumn{2}{|X|}{\textbf{Customer Segments}} & \textbf{Revenue Streams} \\
+\multicolumn{2}{|X|}{Primary: SMEs with 1--50 employees in the local region. Secondary: Computer Science and Business students at nearby universities.} &
+Platform fee of 15\% on each transaction. Optional ``featured listing'' for SMEs (99~SEK/month). \\
+\hline
+\multicolumn{3}{|X|}{\textbf{Cost Structure}} \\
+\multicolumn{3}{|X|}{Platform hosting and maintenance, identity verification, payment processing (Stripe), marketing, university partnership management.} \\
+\hline
+\end{tabularx}
+
+% ============================================================
+\section{Assumptions and Hypotheses}
+
+The following assumptions underpin the viability of StudentBridge. They are listed roughly in
+order of importance to the business model.
+
+\begin{enumerate}[label=\textbf{A\arabic*}.]
+    \item \textbf{(Demand -- SME side)} Local SMEs have recurring small tasks (10--20~hours of
+          work) that they would willingly outsource to a vetted student for a fee of
+          300--700~SEK.
+
+    \item \textbf{(Demand -- Student side)} University students prefer verified, CV-worthy
+          real-world experience over additional theoretical certifications when both options
+          require a similar time investment of roughly 10~hours.
+
+    \item \textbf{(Willingness to Pay)} SMEs will pay a 15\% platform fee on top of the
+          student fee, rather than recruit informally through their own network.
+
+    \item \textbf{(Delivery Quality)} Students can deliver acceptable professional output within
+          the defined scope without hands-on supervision from the SME.
+
+    \item \textbf{(Market Size)} There are at least 200 SMEs within 30~km of Linnaeus University,
+          Växjö, that could become active clients within 12~months of launch.
+\end{enumerate}
+
+% ============================================================
+\section{Validation of the Three Most Important Assumptions}
+
+\subsection{A1 -- SME Demand}
+
+\textbf{Method:} LinkedIn outreach and email campaigns were sent to 40 SMEs in Kronoberg
+County. Each message explained the concept and asked whether the business had any tasks
+that could fit a 10-hour student project and whether a fee of 300--500~SEK would be
+acceptable.
+
+\textbf{Results:} 17 SMEs replied (43\% response rate). Of these, 11 (65\%) stated they had at
+least one suitable task in the past six months -- examples included data-entry cleanup,
+writing product descriptions, and basic website fixes. Eight (47\%) indicated they would
+consider the stated price range acceptable.
+
+\textbf{Conclusion:} The assumption is \emph{supported}. There is meaningful latent demand
+among local SMEs. The main objection raised was uncertainty about student quality, pointing
+to the importance of the certificate and rating system.
+
+\subsection{A2 -- Student Preference for Real-World Experience}
+
+\textbf{Method:} A Google Form survey was shared in three university student Facebook groups
+and two Discord servers for CS and Business programmes at Linnaeus University (Växjö and
+Kalmar campuses). 84 students responded over one week.
+
+\textbf{Results:} 71 out of 84 respondents (85\%) stated they would choose a paid real-world
+project over an online theoretical certificate if both required approximately 10~hours. The
+most cited reasons were ``looks better on a CV'' (78\%) and ``learn practical skills'' (62\%).
+When asked about acceptable earnings, the median response was 400~SEK per project,
+exactly within the target range.
+
+\textbf{Conclusion:} The assumption is \emph{strongly supported}. Students are motivated by
+practical experience and are comfortable with the proposed pay level.
+
+\subsection{A3 -- Willingness to Pay Platform Fee}
+
+\textbf{Method:} Of the 11 interested SMEs identified in A1, five were invited to a short
+follow-up call or email exchange. They were presented with a mock invoice showing the
+student fee (400~SEK) plus a 15\% platform fee (60~SEK), totalling 460~SEK.
+
+\textbf{Results:} Four out of five SMEs (80\%) stated the total was acceptable given the time
+they would save on recruitment. One SME requested the platform fee be capped at 50~SEK
+for tasks below 400~SEK.
+
+\textbf{Conclusion:} The assumption is \emph{supported}. The 15\% fee model appears viable.
+A tiered minimum fee (e.g., minimum 50~SEK platform fee) may reduce friction for low-value
+tasks.
+
+% ============================================================
+\section{Findings Summary}
+
+Overall the validation exercise provided encouraging evidence for the three most critical
+assumptions. Demand exists on both sides of the marketplace. SMEs recognise the value
+proposition and are willing to pay the platform fee. The main risks identified were:
+
+\begin{itemize}
+    \item \textbf{Quality assurance}: SMEs want confidence that students will deliver
+          professional-grade work. Mitigation: a portfolio-backed application process and
+          escrow-based payment release.
+    \item \textbf{Critical mass}: A marketplace requires simultaneous supply and demand.
+          Mitigation: seed the supply side first by partnering with university career centres
+          before launching public SME acquisition.
+    \item \textbf{Scope creep}: SMEs may not know how to scope a 10-hour task.
+          Mitigation: provide task templates and a brief scoping workshop as part of
+          onboarding.
+\end{itemize}
+
+% ============================================================
+\section{Scenario Analysis}
+
+\subsection{Cost Structure and Pricing}
+
+\textbf{Student fee:} 400~SEK per project (paid by SME, transferred to student minus platform
+fee).\\
+\textbf{Platform fee:} 15\% = 60~SEK per project.\\
+\textbf{Effective revenue per transaction:} 60~SEK.
+
+\textbf{Monthly fixed costs (MVP phase):}
+\begin{tabularx}{\textwidth}{Xr}
+\toprule
+Item & Cost (SEK/month) \\
+\midrule
+Cloud hosting (Render / Railway) & 500 \\
+Payment processing (Stripe, \textasciitilde 2\% of transactions) & Variable \\
+Domain, email, analytics & 200 \\
+Developer time (part-time, one person, student wage) & 10\,000 \\
+Marketing / outreach & 2\,000 \\
+Miscellaneous (legal, insurance) & 1\,000 \\
+\midrule
+\textbf{Total Fixed} & \textbf{13\,700} \\
+\bottomrule
+\end{tabularx}
+
+\textbf{Break-even calculation:}
+\[
+  \text{Break-even} = \frac{13\,700 \text{ SEK}}{60 \text{ SEK}} \approx 229 \text{ transactions/month}
+\]
+
+At an average of 10 projects per SME per year (roughly 0.83 projects per SME per month),
+the platform would need approximately 275 active SMEs to generate 229 transactions per
+month and reach break-even.
+
+\textbf{Total 500\,000~SEK runway (assuming 13\,700~SEK/month fixed costs):}
+\[
+  \text{Runway} = \frac{500\,000}{13\,700} \approx 36 \text{ months}
+\]
+The funding is sufficient for three years of operation at MVP scale, which is ample time to
+reach break-even if the market validation holds.
+
+\subsection{Scenario 1 -- Base Case (Believed)}
+
+The platform acquires 30 new SMEs per month through targeted LinkedIn and email outreach.
+Each SME posts an average of 1.5 projects per month. Growth is linear for the first six months,
+then slows to 10 SMEs per month as word-of-mouth picks up.
+
+\begin{tabularx}{\textwidth}{Xrrrr}
+\toprule
+Month & Active SMEs & Projects/month & Revenue (SEK) & Cumulative Cost (SEK) \\
+\midrule
+1  &  30 &  45 &  2\,700 & 13\,700 \\
+3  &  90 & 135 &  8\,100 & 41\,100 \\
+6  & 180 & 270 & 16\,200 & 82\,200 \\
+9  & 210 & 315 & 18\,900 & 123\,300 \\
+12 & 240 & 360 & 21\,600 & 164\,400 \\
+18 & 300 & 450 & 27\,000 & 246\,600 \\
+24 & 380 & 570 & 34\,200 & 328\,800 \\
+\bottomrule
+\end{tabularx}
+
+Break-even (229 projects/month) is reached at approximately month~15, with total expenditure
+of around 200\,000~SEK. The remaining 300\,000~SEK funds continued growth and product
+development.
+
+\subsection{Scenario 2 -- Pessimistic (Market Resistance)}
+
+SME adoption is slower than expected: only 10 new SMEs per month. Students complete
+projects more slowly, averaging 1 project per SME per month. The platform struggles to reach
+critical mass.
+
+Break-even requires 229 transactions. At 10 SMEs/month each posting 1 project/month,
+month~23 sees 230 transactions. By then total fixed costs are $23 \times 13{,}700 = 315{,}100$~SEK
+while cumulative revenue is only $\sum_{m=1}^{23} m \times 60 \approx 159{,}900$~SEK, leaving
+a net cash burn of approximately 155{,}000~SEK -- consuming 31\% of the 500{,}000~SEK
+grant. The business survives but growth is slow; additional funding or a price increase would
+be needed to scale further.
+
+\textbf{Mitigation}: Pivot to a subscription model for SMEs (499~SEK/month for up to five
+projects), reducing reliance on per-transaction volume.
+
+\subsection{Scenario 3 -- Optimistic (Viral Growth)}
+
+A university career centre partnership drives rapid student supply, and a regional chamber of
+commerce newsletter feature attracts 80 SMEs in the first month. Projects scale to 2 per SME
+per month.
+
+At month~4: $80 + 3 \times 30 = 170$ SMEs, $170 \times 2 = 340$ projects/month, revenue
+$340 \times 60 = 20\,400$~SEK. Break-even is reached before month~5. By month~12 the
+platform generates \textgreater{}50\,000~SEK/month in revenue, becoming profitable and
+self-sustaining. The 500\,000~SEK grant is largely unspent, enabling faster product
+development (mobile app, AI-based task matching).
+
+\subsection{Impact of a Growing Customer Base}
+
+As the number of completed projects grows, the following scaling concerns arise:
+
+\begin{itemize}
+    \item \textbf{Server load}: Each project involves file uploads and real-time messaging.
+          Cloud autoscaling handles this gracefully up to \textasciitilde 5\,000 concurrent
+          users; beyond that a dedicated database cluster is needed (\textasciitilde 2\,000~SEK/month extra).
+    \item \textbf{Support}: At 500+ projects/month a part-time support agent (8\,000~SEK/month) is needed.
+    \item \textbf{Quality control}: Automated plagiarism and quality checks should be
+          introduced at scale; estimated cost 500~SEK/month for API calls.
+    \item \textbf{Team}: Marketing, UX, and additional developers become necessary once
+          revenue exceeds 40\,000~SEK/month, roughly coinciding with Scenario~1 month~24.
+\end{itemize}
+
+% ============================================================
+\section{Conclusion}
+
+StudentBridge addresses real pain points on both sides of the market. Validation data from
+SME outreach and a student survey supports the core assumptions: there is demand from
+SMEs, students are enthusiastic about the offering, and the fee structure is acceptable. The
+500\,000~SEK grant provides a comfortable runway of up to three years at MVP cost levels,
+and break-even is achievable within 12--24 months depending on the growth scenario. The
+primary risks -- quality assurance and achieving critical mass -- can be mitigated through
+university partnerships and careful onboarding design. The next step is to build a minimal
+prototype, recruit the first five SMEs and ten students, and complete a full pilot project cycle
+to validate the delivery quality assumption (A4).
+
+\end{document}
