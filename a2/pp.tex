@@ -1,0 +1,331 @@
+\documentclass[aspectratio=169]{beamer}
+
+% 1. Load the modern Metropolis Theme
+\usetheme{metropolis}
+
+% 2. Establish a sophisticated, premium color palette
+\definecolor{DarkSlate}{RGB}{0, 200, 118}       % Deep charcoal for dark slides
+\definecolor{SendItGreen}{RGB}{0, 230, 118}    % Vibrant tech-green for highlights
+\definecolor{LightCanvas}{RGB}{248, 249, 250}  % Off-white canvas for data readability
+\definecolor{CardBg}{RGB}{238, 240, 242}       % Clean background accent for UI blocks
+\definecolor{DeepText}{RGB}{45, 50, 60}
+
+% 3. Apply the brand colors to the Metropolis elements
+\setbeamercolor{palette primary}{bg=DarkSlate, fg=white}
+\setbeamercolor{structure}{fg=DarkSlate}
+\setbeamercolor{normal text}{fg=DeepText}
+\setbeamercolor{background canvas}{bg=LightCanvas}
+
+% 4. Modernize Block layouts (Clean UI cards instead of generic boxes)
+\setbeamertemplate{blocks}[rounded][shadow=false]
+\setbeamercolor{block title}{bg=DarkSlate!90, fg=white}
+\setbeamercolor{block body}{bg=CardBg, fg=DeepText}
+
+% 5. Fine-tune progress elements
+\setbeamercolor{progress bar}{fg=SendItGreen, bg=DarkSlate!20}
+\setbeamercolor{title separator}{fg=SendItGreen}
+
+% 6. Clean up the footer for maximized whitespace
+\setbeamertemplate{footline}{}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{hyperref}
+\usepackage{url}
+\urlstyle{same}
+
+% Presentation Information
+\title[Lean Startup: SendIt]{Assignment 2: Lean Startup}
+\subtitle{SendIt -- Peer-to-Peer secure file transfer \\ \small 2DV614}
+\author[Ulvagården, Wingren, Berg]{Emil Ulvagården, Jesper Wingren \& Samuel Berg}
+\institute[LNU]{Linnaeus University}
+\date{\today}
+
+\begin{document}
+
+% --- TITLE SLIDE (High Impact Dark Theme) ---
+\begin{frame}[plain]
+    \titlepage
+\end{frame}
+
+% --- TABLE OF CONTENTS (Dark Transition) ---
+\setbeamercolor{background canvas}{bg=LightCanvas}
+\setbeamercolor{normal text}{fg=DeepText}
+\setbeamercolor{section in toc}{fg=DeepText}
+\begin{frame}{Table of Contents}
+    \tableofcontents
+\end{frame}
+
+% Reset back to standard light layouts for regular content tracking
+\setbeamercolor{background canvas}{bg=LightCanvas}
+\setbeamercolor{normal text}{fg=DeepText}
+
+% ==================== VISION ====================
+\section{Vision}
+\begin{frame}{Vision}
+    \begin{block}{The Core Vision}
+        To revolutionize global data movement by replacing centralized cloud storage with a direct, zero-latency peer-to-peer network that empowers creators with absolute privacy and instant delivery.
+    \end{block}
+
+    \vspace{0.4cm}
+    \begin{columns}[t]
+        \begin{column}{0.31\textwidth}
+            \centering
+            \textcolor{SendItGreen}{\normalsize $\bullet$}\ \textbf{Absolute Privacy}\\
+            \small Without intermediary storage components.
+        \end{column}
+        \begin{column}{0.34\textwidth}
+            \centering
+            \textcolor{SendItGreen}{\normalsize $\bullet$}\ \textbf{Seamless UX}\\
+            \small Zero-configuration cross-platform environment.
+        \end{column}
+        \begin{column}{0.31\textwidth}
+            \centering
+            \textcolor{SendItGreen}{\normalsize $\bullet$}\ \textbf{Decentralized}\\
+            \small Securing asset workflows on a global scale.
+        \end{column}
+    \end{columns}
+\end{frame}
+
+% ==================== CUSTOMER PROBLEM ====================
+\section{Customer Problem and Needs}
+\begin{frame}{Customer Problem and Needs}
+    \begin{columns}
+        \begin{column}{0.48\textwidth}
+            \begin{block}{The Problem}
+                Current solutions utilize an upload/download architecture, requiring a full upload to the cloud/server before a recipient can initiate the download, creating significant latency in large file transfers.
+            \end{block}
+        \end{column}
+
+        \begin{column}{0.48\textwidth}
+            \small
+            \vspace{0.2cm}
+            \textbf{Key Core Pain Points:}
+            \vspace{0.2cm}
+            \begin{itemize}
+                \item \textbf{Security Vulnerabilities:} Centralized servers are prone to data breaches and unauthorized access.
+                \item \textbf{File Size Limitations:} Existing free tiers heavily restrict large file uploads.
+                \item \textbf{Privacy Concerns:} Data logging and tracking by major cloud providers.
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+% ==================== SOLUTION ====================
+\section{Solution}
+\begin{frame}{The SendIt Solution}
+    \begin{block}{The Value Proposition}
+        SendIt establishes a real-time, encrypted tunnel that allows recipients to begin downloading massive files the moment the sender hits start, bypassing the cloud entirely.
+    \end{block}
+
+    \vspace{0.3cm}
+    \begin{columns}[t]
+        \begin{column}{0.32\textwidth}
+            \small \textbf{P2P Architecture}\\
+            Eliminates the ``double-wait'' by streaming data directly between devices via WebRTC.
+        \end{column}
+        \begin{column}{0.32\textwidth}
+            \small \textbf{Zero-Knowledge}\\
+            Files never touch a central server, removing the risk of third-party breaches.
+        \end{column}
+        \begin{column}{0.32\textwidth}
+            \small \textbf{Pure Scalability}\\
+            Bypass storage caps and bandwidth throttling by utilizing user-owned hardware.
+        \end{column}
+    \end{columns}
+\end{frame}
+
+% ==================== TEAM ====================
+\section{Team (Name and Picture)}
+\begin{frame}{Team}
+    \begin{columns}[t]
+        \begin{column}{0.31\textwidth}
+            \centering
+            \textbf{Emil Ulvagården}\\
+            \vspace{0.3cm}
+            % CHANGED: innersep=0.3cm to sep=0.3cm
+            \begin{beamercolorbox}[center,rounded=true,sep=0.3cm]{block body}
+                \color{DarkSlate!60}\vspace{0.5cm}
+                [Picture\\Placeholder]
+                \vspace{0.5cm}
+            \end{beamercolorbox}
+        \end{column}
+
+        \begin{column}{0.31\textwidth}
+            \centering
+            \textbf{Jesper Wingren}\\
+            \vspace{0.3cm}
+            % CHANGED: innersep=0.3cm to sep=0.3cm
+            \begin{beamercolorbox}[center,rounded=true,sep=0.3cm]{block body}
+                \color{DarkSlate!60}\vspace{0.5cm}
+                [Picture\\Placeholder]
+                \vspace{0.5cm}
+            \end{beamercolorbox}
+        \end{column}
+
+        \begin{column}{0.31\textwidth}
+            \centering
+            \textbf{Samuel Berg}\\
+            \vspace{0.3cm}
+            % CHANGED: innersep=0.3cm to sep=0.3cm
+            \begin{beamercolorbox}[center,rounded=true,sep=0.3cm]{block body}
+                \color{DarkSlate!60}\vspace{0.5cm}
+                [Picture\\Placeholder]
+                \vspace{0.5cm}
+            \end{beamercolorbox}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+% ==================== MARKETING STRATEGY ====================
+\section{Goals for Marketing and Sales Strategy}
+\begin{frame}{Goals for Marketing and Sales Strategy}
+    \begin{columns}[t]
+        \begin{column}{0.48\textwidth}
+            \begin{block}{Target Market Focus}
+                \small Remote teams, developers, freelance creators, and students.
+            \end{block}
+            \vspace{0.2cm}
+            \begin{block}{Go-to-Market Channels}
+                \begin{itemize}
+                    \small
+                    \item Open-source communities.
+                    \item Content marketing focused on privacy engineering.
+                \end{itemize}
+            \end{block}
+        \end{column}
+
+        \begin{column}{0.48\textwidth}
+            \centering
+            \vspace{1cm}
+            {\small Key Conversion Target:} % Cleaned up \text to native text rendering
+            \vspace{0.3cm}
+
+            % CHANGED: innersep=0.4cm to sep=0.4cm
+            \begin{beamercolorbox}[center,rounded=true,sep=0.4cm]{block body}
+                \textcolor{DarkSlate}{\Huge \textbf{1,000}}\\
+                \vspace{0.1cm}
+                \small Active users within the first quarter.
+            \end{beamercolorbox}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+% ==================== BUSINESS MODEL ====================
+\section{Business Model}
+\begin{frame}{Business Model: Monetization Structure}
+    \begin{table}
+        \centering
+        \small
+        \renewcommand{\arraystretch}{1.3}
+        \begin{tabular}{l p{7cm} r}
+            \toprule
+            \textbf{\color{DarkSlate}Tier} & \textbf{\color{DarkSlate}Features} & \textbf{\color{DarkSlate}Price} \\
+            \midrule
+            Free & Core P2P, basic speed, standard support, ads & 0 SEK \\
+            One-Time & High speed transfer, priority support & 50 SEK \\
+            \textbf{Pro} & \textbf{High speed transfer, no ads} & \textbf{100 SEK / mo} \\
+            Studio & 6 Pro accounts, team management & 500 SEK / mo \\
+            \bottomrule
+        \end{tabular}
+        \caption{SendIt Tiered Pricing Model}
+    \end{table}
+\end{frame}
+
+% ==================== LEAN CANVAS ====================
+\section{Business Model Canvas}
+\begin{frame}[plain]{Business Model Canvas}
+    \centering
+    \includegraphics[width=1.00\textwidth,height=0.90\textheight,keepaspectratio]{LeanCanvas.png}
+\end{frame}
+
+% ==================== DEVELOPMENT PHASE ====================
+\section{Development Phase and Validation}
+\begin{frame}{Development Phase \& Validation}
+    \begin{columns}[t]
+        \begin{column}{0.48\textwidth}
+            \textbf{50k SEK Budget Insights:}
+            \vspace{0.2cm}
+            \begin{itemize}
+                \small
+                \item \textbf{Market Pull:} 15\% conversion rate on landing page tests; security identified as a primary value driver.
+                \item \textbf{Feasibility:} 80\% success rate in direct P2P hole-punching across diverse network environments.
+            \end{itemize}
+            \vspace{0.2cm}
+            \small \textbf{Current Status:} Handshake Prototype validated; MVP in development for alpha testing.
+        \end{column}
+
+        \begin{column}{0.48\textwidth}
+            \textbf{Key Performance Indicators (KPIs):}
+            \vspace{0.2cm}
+            % FIXED: Changed innersep=0.25cm to sep=0.25cm
+            \begin{beamercolorbox}[rounded=true,sep=0.25cm]{block body}
+                \small
+                \begin{enumerate}
+                    \item \textit{Retention Rate:} Weekly active senders.
+                    \item \textit{Transfer Reliability:} Direct vs. Relay connection ratio (critical for cost control).
+                    \item \textit{Viral Coefficient ($K$):} Conversion rate of file recipients into new senders.
+                \end{enumerate}
+            \end{beamercolorbox}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+% ==================== CAPITAL NEED ====================
+\section{Capital Need and Use}
+\begin{frame}{Capital Need and Use}
+    \begin{columns}
+        \begin{column}{0.45\textwidth}
+            \centering
+            Target Runway Allocation
+            \vspace{0.3cm}
+            % FIXED: Changed innersep=0.4cm to sep=0.4cm
+            \begin{beamercolorbox}[center,rounded=true,sep=0.4cm]{block title}
+                \textcolor{white}{\Large \textbf{500,000 SEK}}
+            \end{beamercolorbox}
+            \vspace{0.4cm}
+            \small \textbf{Projected Milestone:}\\ Reach break-even point at 250 Pro subscribers by Month 8.
+        \end{column}
+
+        \begin{column}{0.53\textwidth}
+            \begin{itemize}
+                \small
+                \item \textbf{Engineering \& Dev (60\%):} Technical implementation of WebRTC protocols and cross-platform application optimization.
+                \item \textbf{Infrastructure \& Relays (20\%):} Deployment of global STUN/TURN signaling servers to maintain the 80\%+ direct connection rate.
+                \item \textbf{Growth \& Compliance (20\%):} GDPR-focused privacy audits and targeted marketing to professional creative segments.
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+% ==================== EXIT STRATEGY ====================
+\section{Exit Strategy}
+\begin{frame}{Exit Strategy}
+    \begin{columns}[t]
+        \begin{column}{0.48\textwidth}
+            \small \textbf{Strategic Acquisition Framework:}
+            \vspace{0.2cm}
+            \begin{itemize}
+                \footnotesize
+                \item \textbf{Privacy Giants:} Companies like \textit{Proton} or \textit{Signal} looking to expand into high-speed file sharing.
+                \item \textbf{Infrastructure \& Edge:} \textit{Cloudflare} or \textit{Akamai} seeking to integrate decentralized P2P protocols.
+                \item \textbf{Workflow Platforms:} \textit{Atlassian} or \textit{Adobe} integrating native P2P transfers into creative suites.
+            \end{itemize}
+        \end{column}
+
+        \begin{column}{0.48\textwidth}
+            \begin{block}{Platform Licensing}
+                \small Licensing our proprietary NAT-traversal and signaling engine as a white-label API for enterprise communication tools.
+            \end{block}
+            \vspace{0.2cm}
+            \begin{block}{Organic Growth}
+                \small Scaling into a stand-alone professional utility, targeting a sustainable B2B subscription model.
+            \end{block}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\end{document}

@@ -1,0 +1,9 @@
+Set the scene:
+A video producer is out on a studio set shooting high-res video clips on his iPhone. An editor is sitting at his desktop workstation across the room, waiting to start cutting the footage. 
+
+The Problem: 
+The file is 5.2 GB. AirDrop does not work because they are on different systems, and uploading it to Google Drive or WeTransfer would take quite some time just to compress and upload, and then double that for the editor to download.
+
+*****START VIDEO******
+So the video producer logs into his account on his phone, and goes into send file. At the same time the editor opens his receive file on his desktop website. This creates a qr code which the video editor scans to establish a connection. We then wait for the connection while the videographer chooses which file to send. When connection has been established the editor accepts and the videgrapher hits send. 
+This initilaizes the sending of the data and we have succesfully sent the data.
